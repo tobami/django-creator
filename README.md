@@ -6,8 +6,8 @@ Django template to create new projects.
 ### Requirements
 
 - git
-- Docker CE 17+
-- Docker Compose 1.16+
+- [Docker CE](https://docs.docker.com/engine/installation/) 17.09+
+- [Docker Compose](https://docs.docker.com/compose/install/) 1.16+
 
 ### Running the project
 

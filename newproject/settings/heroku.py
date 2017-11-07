@@ -1,6 +1,6 @@
 from .prod import *  # noqa
 
-WSGI_APPLICATION = 'newproject.wsgi.application'
+WSGI_APPLICATION = 'newproject.wsgi_heroku.application'
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 

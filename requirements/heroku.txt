@@ -1,0 +1,4 @@
+-r prod.txt
+
+gunicorn>=19.7,<19.8
+whitenoise>=3.3,<3.4

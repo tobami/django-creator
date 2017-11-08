@@ -1,3 +1,3 @@
-from .django import *  # noqa
+from .base import *  # noqa
 
 DEBUG=False

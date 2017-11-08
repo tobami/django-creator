@@ -8,7 +8,7 @@ import os
 
 import dj_database_url
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '+omx(u&j9rdb0q20)gl3^kr4-0a6bvq4!m*_(qep9@acns^ny_'
@@ -41,7 +41,7 @@ ROOT_URLCONF = 'newproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,4 +83,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]

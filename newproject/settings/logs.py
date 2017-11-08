@@ -13,18 +13,6 @@ LOGGING = {
     }
 }
 
-# Sentry
-RAVEN_CONFIG = {'dsn': os.environ.get('RAVEN_DSN')}
-
-if RAVEN_CONFIG['dsn']:
-    INSTALLED_APPS += [
-        'raven.contrib.django.raven_compat',
-    ]
-    LOGGING['handlers']['sentry'] = {
-        'level': 'WARNING',
-        'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
-    }
-
 LOGGING['loggers'] = {
     'django': {
         'handlers': ['console'],
@@ -37,3 +25,15 @@ LOGGING['loggers'] = {
         'propagate': False,
     }
 }
+
+# Sentry
+RAVEN_CONFIG = {'dsn': os.environ.get('RAVEN_DSN')}
+
+if RAVEN_CONFIG['dsn']:
+    INSTALLED_APPS += [
+        'raven.contrib.django.raven_compat',
+    ]
+    LOGGING['handlers']['sentry'] = {
+        'level': 'WARNING',
+        'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
+    }

@@ -18,3 +18,7 @@ You'll then be able to access the application on `localhost:8000`
 
     $ docker-compose run web bash
     $ pytest
+
+To lint the Python code:
+
+    $ flake8

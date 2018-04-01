@@ -2,12 +2,14 @@ version: '3'
 
 services:
   db:
+    container_name: newproject_db
     image: postgres:10.3-alpine
     environment:
       - POSTGRES_USER=newprojectuser
       - POSTGRES_PASSWORD=newprojectpassword
       - POSTGRES_DB=newprojectdb
   web:
+    container_name: newproject_web
     build:
       context: ..
       dockerfile: docker/web/Dockerfile

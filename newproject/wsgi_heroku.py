@@ -1,6 +1,4 @@
-"""
-WSGI config for newproject project.
-"""
+"""WSGI config for newproject project."""
 
 import os
 

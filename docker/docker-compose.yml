@@ -2,20 +2,20 @@ version: '3'
 
 services:
   db:
-    image: postgres:9.6.5-alpine
+    image: postgres:10.3-alpine
     environment:
       - POSTGRES_USER=newprojectuser
       - POSTGRES_PASSWORD=newprojectpassword
       - POSTGRES_DB=newprojectdb
   web:
     build:
-      context: .
+      context: ..
       dockerfile: docker/web/Dockerfile
     environment:
       - DJANGO_SETTINGS_MODULE=newproject.settings.dev
     command: ./manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/code
+      - ..:/code
     ports:
       - "8000:8000"
     env_file:

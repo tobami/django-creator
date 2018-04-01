@@ -10,6 +10,7 @@ Django template to create new projects.
 
 ### Running the project
 
+    $ cd docker
     $ docker-compose up
 
 You'll then be able to access the application on `localhost:8000`
